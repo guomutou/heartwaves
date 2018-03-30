@@ -1,0 +1,414 @@
+[ 2018-03-30T15:51:56+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000516s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003863s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000322s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000351s ]
+
+[ 2018-03-30T15:52:00+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000346s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-30T15:52:16+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000387s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-30T15:55:44+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000338s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003690s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000097s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000121s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000335s ]
+
+[ 2018-03-30T15:56:55+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Admin&c=Login&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000032s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000079s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000319s ]
+
+[ 2018-03-30T15:56:57+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000244s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000267s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-30T15:58:04+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000299s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-30T16:00:25+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '123.206.62.179' (111)
+
+[ 2018-03-30T16:00:42+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '123.206.62.179' (111)
+
+[ 2018-03-30T16:21:09+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-30T16:28:17+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Login&a=checklogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000287s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username='admin' AND password='e85d971955cbdbbf8a2520db40ff909a' AND status ='0' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `h_jingli` SET `lat_time`='1522398497' WHERE ( id='1' ) [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000081s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015132s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000118s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000365s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000405s ]
+
+[ 2018-03-30T16:28:19+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Index&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_article` [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_article` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_liuyan` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_liuyan` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_comment` [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `h_comment` LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] file_get_contents(http://www.lcm.wang/index.php/Home/Index/getVersion): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+ /data/www/html/heartwaves/Application/Admin/Controller/IndexController.class.php 第 18 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: PROCESSOR_IDENTIFIER /data/www/html/heartwaves/Application/Runtime/Cache/Admin/b595b808c2ebeeeb0478ffc30bb4e87a.php 第 378 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035463s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000167s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000461s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2018-03-30T16:28:40+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Jingli&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000318s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( id='1' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( id not in(1)&& status=0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( id not in(1) && status=1 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( id not in(1) )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000129s ]
+NOTIC: [8] Undefined variable: count /data/www/html/heartwaves/Application/Runtime/Cache/Admin/270b887dd050ebdc9813630d2abe9aaa.php 第 268 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007859s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000104s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000370s ]
+
+[ 2018-03-30T16:28:41+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Jingli&a=jinglilist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000257s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000292s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_jingli` WHERE (  id != 1 )  [ RunTime:0.0004s ]
+SQL: SELECT a.*,COUNT(b.id) as yonghu FROM h_jingli a LEFT  JOIN  h_user AS b on a.id=b.jl_id   WHERE (  a.id != 1 ) GROUP BY a.id LIMIT 0,5   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+NOTIC: [8] Undefined variable: vo /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 258 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 259 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 260 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 263 行.
+NOTIC: [8] Use of undefined constant kouling - assumed 'kouling' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 264 行.
+NOTIC: [8] Use of undefined constant end_time - assumed 'end_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 285 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 295 行.
+NOTIC: [8] Undefined variable: vo /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 258 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 259 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 260 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 263 行.
+NOTIC: [8] Use of undefined constant kouling - assumed 'kouling' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 264 行.
+NOTIC: [8] Use of undefined constant end_time - assumed 'end_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 285 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 295 行.
+NOTIC: [8] Undefined variable: vo /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 258 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 259 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 260 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 263 行.
+NOTIC: [8] Use of undefined constant kouling - assumed 'kouling' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 264 行.
+NOTIC: [8] Use of undefined constant end_time - assumed 'end_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 285 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 295 行.
+NOTIC: [8] Undefined variable: vo /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 258 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 259 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 260 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 263 行.
+NOTIC: [8] Use of undefined constant kouling - assumed 'kouling' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 264 行.
+NOTIC: [8] Use of undefined constant end_time - assumed 'end_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 285 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 295 行.
+NOTIC: [8] Undefined variable: vo /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 258 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 259 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 260 行.
+NOTIC: [8] Use of undefined constant create_time - assumed 'create_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 263 行.
+NOTIC: [8] Use of undefined constant kouling - assumed 'kouling' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 264 行.
+NOTIC: [8] Use of undefined constant end_time - assumed 'end_time' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 285 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /data/www/html/heartwaves/Application/Runtime/Cache/Admin/8e2e941ba8c4d1c54de6287fef16c0b3.php 第 295 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009105s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000091s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000115s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000292s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000323s ]
+
+[ 2018-03-30T16:28:42+08:00 ] 61.135.169.81 /heartwaves/index.php?m=Admin&c=Statistics&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000223s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000286s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_user` GROUP BY id  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `h_record` [ RunTime:0.0007s ]
+SQL: SELECT `user_id` FROM `h_record` GROUP BY user_id  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='0' ) GROUP BY a.timetype  [ RunTime:0.0009s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='335' ) GROUP BY a.timetype  [ RunTime:0.0014s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='336' ) GROUP BY a.timetype  [ RunTime:0.0014s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='352' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='353' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='361' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='363' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='427' ) GROUP BY a.timetype  [ RunTime:0.0028s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='437' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='439' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='442' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='558' ) GROUP BY a.timetype  [ RunTime:0.0005s ]
+SQL: SELECT CONCAT(TimeType) as huodong,COUNT(CONCAT(TimeType)) as cishu FROM h_record a LEFT JOIN  h_user as b  ON  a.user_id= b.nickname  WHERE ( a.user_id='568' ) GROUP BY a.timetype  [ RunTime:0.0004s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='0' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='335' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='336' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='352' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='353' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='361' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='363' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='427' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='437' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='439' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='442' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='558' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `nickname` FROM `h_user` WHERE (  id='568' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003871s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003909s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000083s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000106s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000298s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000329s ]
+
+[ 2018-03-30T16:28:43+08:00 ] 61.135.169.81 /heartwaves/index.php/Admin/Statistics/ajaxtest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000307s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0005s ]
+SQL: select j.username ,count(r.TimeType)  as jiance from h_record  r 
+                                          LEFT JOIN h_user u ON u.id= r.user_id  
+                                                LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                   WHERE r.TimeType IN (2,3) GROUP BY j.username [ RunTime:0.0009s ]
+SQL: select j.username ,count(r.TimeType)  as driall from h_record  r 
+                                                                      LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                            LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                                               WHERE r.TimeType IN (61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0011s ]
+SQL:  select j.username ,count(r.TimeType)  as qita from h_record  r 
+                                                              LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                    LEFT JOIN h_jingli j ON j.id=u.jl_id        
+                                                                          WHERE r.TimeType  Not  IN (2,3,61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0009s ]
+SQL: SELECT username as name FROM `h_jingli`  [ RunTime:0.0003s ]
+
+[ 2018-03-30T16:28:44+08:00 ] 61.135.169.81 /heartwaves/index.php/Admin/Statistics/ajaxtest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000191s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000315s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: select j.username ,count(r.TimeType)  as jiance from h_record  r 
+                                          LEFT JOIN h_user u ON u.id= r.user_id  
+                                                LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                   WHERE r.TimeType IN (2,3) GROUP BY j.username [ RunTime:0.0010s ]
+SQL: select j.username ,count(r.TimeType)  as driall from h_record  r 
+                                                                      LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                            LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                                               WHERE r.TimeType IN (61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0016s ]
+SQL:  select j.username ,count(r.TimeType)  as qita from h_record  r 
+                                                              LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                    LEFT JOIN h_jingli j ON j.id=u.jl_id        
+                                                                          WHERE r.TimeType  Not  IN (2,3,61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0012s ]
+SQL: SELECT username as name FROM `h_jingli`  [ RunTime:0.0003s ]
+
+[ 2018-03-30T16:28:44+08:00 ] 61.135.169.81 /heartwaves/index.php/Admin/Statistics/ajaxtest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000197s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000332s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0005s ]
+SQL: select j.username ,count(r.TimeType)  as jiance from h_record  r 
+                                          LEFT JOIN h_user u ON u.id= r.user_id  
+                                                LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                   WHERE r.TimeType IN (2,3) GROUP BY j.username [ RunTime:0.0008s ]
+SQL: select j.username ,count(r.TimeType)  as driall from h_record  r 
+                                                                      LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                            LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                                               WHERE r.TimeType IN (61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0011s ]
+SQL:  select j.username ,count(r.TimeType)  as qita from h_record  r 
+                                                              LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                    LEFT JOIN h_jingli j ON j.id=u.jl_id        
+                                                                          WHERE r.TimeType  Not  IN (2,3,61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0009s ]
+SQL: SELECT username as name FROM `h_jingli`  [ RunTime:0.0003s ]
+
+[ 2018-03-30T16:28:44+08:00 ] 61.135.169.81 /heartwaves/index.php/Admin/Statistics/ajaxtest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000241s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000271s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_jingli` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_jingli` [ RunTime:0.0005s ]
+SQL: select j.username ,count(r.TimeType)  as jiance from h_record  r 
+                                          LEFT JOIN h_user u ON u.id= r.user_id  
+                                                LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                   WHERE r.TimeType IN (2,3) GROUP BY j.username [ RunTime:0.0007s ]
+SQL: select j.username ,count(r.TimeType)  as driall from h_record  r 
+                                                                      LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                            LEFT JOIN h_jingli j ON j.id=u.jl_id  
+                                                                               WHERE r.TimeType IN (61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0012s ]
+SQL:  select j.username ,count(r.TimeType)  as qita from h_record  r 
+                                                              LEFT JOIN h_user u ON u.id= r.user_id  
+                                                                    LEFT JOIN h_jingli j ON j.id=u.jl_id        
+                                                                          WHERE r.TimeType  Not  IN (2,3,61,62,63,64,65,66,41,42,43,44,45,46,70,71,72,20) GROUP BY j.username [ RunTime:0.0009s ]
+SQL: SELECT username as name FROM `h_jingli`  [ RunTime:0.0003s ]
+
