@@ -1,0 +1,93 @@
+<include file="Public/top" title = "心脑电波-修改幻灯片" />
+        <!-- start left -->
+<include file="Public/left"/>
+         <!-- end left -->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>修改幻灯片</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                   <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <!-- <h5>All form elements <small>With custom checbox and radion elements.</small></h5> -->
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                        <div class="hr-line-dashed"></div>
+                            <form method="post" class="form-horizontal" action="{:U('Slides/doedit',array('id'=>$arr['id']))}" enctype="multipart/form-data">
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动标题</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="biaoti" required value = "{$arr.biaoti}"></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动介绍</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="jieshao" required value = "{$arr.jieshao}"></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">推广类型</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="tuiguang" required value = "{$arr.tuiguang}"></div>
+                                </div>
+
+
+
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">模板名称</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="name" required value = "{$arr.name}"></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">列表图片</label>
+
+                                    <div class="col-sm-3"><input type="file" name="listpic"></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">背景图片</label>
+
+                                    <div class="col-sm-3"><input type="file" name="bg_pic"></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">头像图片</label>
+
+                                    <div class="col-sm-3"><input type="file" name="head_pic"></div>
+                                </div>
+                                     <div class="hr-line-dashed"></div>
+                                <!-- <div class="form-group"><label class="col-sm-4 control-label">幻灯片地址（前面请加上http://）</label>
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="url" required value = "{$arr.url}"></div>
+                                    </div>
+                                </div> -->
+                               <div class="ibox-content">
+                            <div class="text-center">
+                            <input type="submit" value="保存" class="btn btn-primary" data-toggle="modal">
+                            </div>
+
+                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+

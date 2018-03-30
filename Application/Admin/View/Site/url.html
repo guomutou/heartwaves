@@ -1,0 +1,122 @@
+<include file="Public/top" title = "心脑电波-URL模式設置" />
+        <!-- start left -->
+<include file="Public/left"/>
+         <!-- end left -->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>URL模式設置</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                   <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <!-- <h5>All form elements <small>With custom checbox and radion elements.</small></h5> -->
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                        <div class="hr-line-dashed"></div>
+                            <form method="post" class="form-horizontal" action="{:U('Site/dourl')}" enctype="multipart/form-data">
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">当前URL模式</label>
+                                    <div class="col-sm-3">
+                                            <select name="type" class="form-control">
+                                                <option value="0" <if condition = "$urlSite eq '0'">selected</if>>普通模式</option>
+                                                <option value="1" <if condition = "$urlSite eq '1'">selected</if>>PATHINFO模式</option>
+                                                <option value="2" <if condition = "$urlSite eq '2'">selected</if>>REWRITE模式</option>
+                                                <option value="3" <if condition = "$urlSite eq '3'">selected</if>>兼容模式</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <center>
+                                <div style= "color:red">修改方法：修改\Application\Common\Conf\config.php里面的URL_MODEL参数</div>
+                                </center>
+                                <br>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-primary">
+                                        <div class="panel-heading">
+                                            普通模式
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>普通模式也就是传统的GET传参方式来指定当前访问的模块和操作，例如： http://localhost/?m=home&c=user&a=login&var=value</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-warning">
+                                        <div class="panel-heading">
+                                            PATHINFO模式
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>PATHINFO模式是系统的默认URL模式，提供了最好的SEO支持，系统内部已经做了环境的兼容处理，所以能够支持大多数的主机环境。对应上面的URL模式，PATHINFO模式下面的URL访问地址是： http://localhost/index.php/home/user/login/var/value/</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-info">
+                                        <div class="panel-heading">
+                                            REWRITE模式
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>REWRITE模式是在PATHINFO模式的基础上添加了重写规则的支持，可以去掉URL地址里面的入口文件index.php，但是需要额外配置WEB服务器的重写规则。
+
+如果是Apache则需要在入口文件的同级添加.htaccess文件，内容如下：
+
+    <IfModule mod_rewrite.c>
+     RewriteEngine on
+     RewriteCond %{REQUEST_FILENAME} !-d
+     RewriteCond %{REQUEST_FILENAME} !-f
+     RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+    </IfModule>
+
+接下来，就可以用下面的URL地址访问了： http://localhost/home/user/login/var/value</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="panel panel-danger">
+                                        <div class="panel-heading">
+                                            兼容模式
+                                        </div>
+                                        <div class="panel-body">
+                                            <p>兼容模式是用于不支持PATHINFO的特殊环境，URL地址是： http://localhost/?s=/home/user/login/var/value</p>
+                                        </div>
+                                    </div>
+                                </div>
+                               <div class="ibox-content">
+                            <div class="text-center">
+                            </div>
+
+                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+

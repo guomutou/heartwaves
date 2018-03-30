@@ -1,0 +1,318 @@
+<include file="Public/top" title = "个人记录" />
+<style type="text/css">
+    .viewall{float: right;right: 5%;}
+</style>
+        <!-- start left -->
+<include file="Public/left"/>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!-- start top -->
+        <include file="Public/top"/>
+        <!-- end top -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>个人记录</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>欢迎使用HRV调节训练系统管理平台!</h5>
+                        <a href = "__CONTROLLER__/usermanager"><div class="viewall">返回上一级</div></a>
+                    </div>
+                    <div class="ibox-content">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example"  id="uid">
+                    <thead>
+					<form name = "form1" action = "__CONTROLLER__/recordSearch" method = "get">
+			<!--<a href = "#"><button type = "button"> 新增用户</button></a>-->&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;<div style = "width:250px;display:inline-block;float:left;margin:20px 10px;"><span style = "font-size:15px;font-weight:bold;">用户名:</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "uname" placeholder = "用户名"></div>
+            <!--<div style = "width:250px;display:inline-block;float:left;margin:20px 10px;"><span style = "font-size:15px;font-weight:bold;">记录时间:</span>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "date" name = "time" placeholder = "记录时间"></div>-->
+			<div style = "width:515px;display:inline-block;float:left;margin:20px 10px;;"><span style = "font-size:15px;font-weight:bold;">类型:</span>&nbsp;&nbsp;&nbsp;&nbsp;<select style = "width:100px;" name = "sel">
+
+			<option select = "selected"></option>
+			<foreach name = "sel" item = "v">
+			<option value = '<?php  if ($v["timetype"] == 1){
+                echo 1;
+            }
+            else if ($v["timetype"] == 2){
+                echo 2;
+            }
+            else if ($v["timetype"] == 3){
+                echo 3;
+            }
+            else if ($v["timetype"] == 61){
+                echo 61;
+            }
+            else if ($v["timetype"] == 62){
+                echo 62;
+            }
+            else if ($v["timetype"] == 63){
+                echo 63;
+            }
+            else if ($v["timetype"] == 64){
+                echo 64;
+            }
+            else if ($v["timetype"] == 65){
+                echo 65;
+            }
+            else if ($v["timetype"] == 66){
+                echo 66;
+            }
+            else if ($v["timetype"] == 41){
+                echo 41;
+            }
+            else if ($v["timetype"] == 42){
+                echo 42;
+            }
+            else if ($v["timetype"] == 43){
+                echo 43;
+            }
+            else if ($v["timetype"] == 44){
+                echo 44;
+            }
+            else if ($v["timetype"] == 45){
+                echo 45;
+            }
+            else if ($v["timetype"] == 46){
+                echo 46;
+            }
+            else if ($v["timetype"] == 70){
+                echo 70;
+            }
+            else if ($v["timetype"] == 71){
+                echo 71;
+            }
+            else if ($v["timetype"] == 72){
+                echo 72;
+            }
+            else if ($v["timetype"] == 20){
+                echo 20;
+            }
+            else{
+                echo 100;
+            }?>'><?php  if ($v["timetype"] == 1){
+                echo "基线测试";
+            }
+            else if ($v["timetype"] == 2){
+                echo "5分钟测试";
+            }
+            else if ($v["timetype"] == 3){
+                echo "10分钟测试";
+            }
+            else if ($v["timetype"] == 61){
+                echo "荷韵";
+            }
+            else if ($v["timetype"] == 62){
+                echo "梅花";
+            }
+            else if ($v["timetype"] == 63){
+                echo "丝绸之路";
+            }
+            else if ($v["timetype"] == 64){
+                echo "菩提树";
+            }
+            else if ($v["timetype"] == 65){
+                echo "生命之泉";
+            }
+            else if ($v["timetype"] == 66){
+                echo "星空";
+            }
+            else if ($v["timetype"] == 41){
+                echo "挪来移去";
+            }
+            else if ($v["timetype"] == 42){
+                echo "看图绘画";
+            }
+            else if ($v["timetype"] == 43){
+                echo "边缘视力";
+            }
+            else if ($v["timetype"] == 44){
+                echo "多彩球";
+            }
+            else if ($v["timetype"] == 45){
+                echo "方向瞬记";
+            }
+            else if ($v["timetype"] == 46){
+                echo "以此类推";
+            }
+            else if ($v["timetype"] == 70){
+                echo "神笔马良";
+            }
+            else if ($v["timetype"] == 71){
+                echo "冒险岛";
+            }
+            else if ($v["timetype"] == 72){
+                echo "射箭";
+            }
+            else if ($v["timetype"] == 20){
+                echo "情境仿真";
+            }
+            else{
+                echo "放松训练";
+            }?></option>
+			</foreach>
+			</select>
+                <div style = "float:left;margin:0px 11px;"><span style = "font-size:15px;font-weight:bold;">组织:</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <select style = "width:100px;" name ="group">
+                        <option value=""></option>
+                        <?php foreach ($group as $k=>$v):?>
+                        <option value="<?=$v['name']?>"><?=$v['name']?></option>
+                        <?php endforeach?>
+                    </select>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type = "submit" name = "submit" value = "查询"></div>
+			</form>
+			<br>
+                    <tr>
+                        <!--<th>序号</th> -->
+                    	<th>用户名</th>
+	      	            <th>记录类型</th>
+                    	<!-- <th>难度</th> -->
+                    	<th>开始时间</th>
+                        <th>记录时长</th>
+                        <th>综合得分</th>
+                        <th>调节指数</th>
+                        <th>稳定指数</th>
+                        <th>压力指数</th>
+        		      	<th>HRV得分</th>
+            			<!-- <th>评价</th>
+                        <th>用户备注</th> -->
+            			<th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="list" item="vo" key="k">
+                    <tr class="gradeU">
+                       	<!-- <td>{$vo.id}</td> -->
+                       	<td>{$vo.nickname}</td>
+                       	<td><?php  if ($vo["timetype"] == 1){
+                echo "基线测试";
+            }
+            else if ($vo["timetype"] == 2){
+                echo "5分钟测试";
+            }
+            else if ($vo["timetype"] == 3){
+                echo "10分钟测试";
+            }
+            else if ($vo["timetype"] == 61){
+                echo "荷韵";
+            }
+            else if ($vo["timetype"] == 62){
+                echo "梅花";
+            }
+            else if ($vo["timetype"] == 63){
+                echo "丝绸之路";
+            }
+            else if ($vo["timetype"] == 64){
+                echo "菩提树";
+            }
+            else if ($vo["timetype"] == 65){
+                echo "生命之泉";
+            }
+            else if ($vo["timetype"] == 66){
+                echo "星空";
+            }
+            else if ($vo["timetype"] == 41){
+                echo "挪来移去";
+            }
+            else if ($vo["timetype"] == 42){
+                echo "看图绘画";
+            }
+            else if ($vo["timetype"] == 43){
+                echo "边缘视力";
+            }
+            else if ($vo["timetype"] == 44){
+                echo "多彩球";
+            }
+            else if ($vo["timetype"] == 45){
+                echo "方向瞬记";
+            }
+            else if ($vo["timetype"] == 46){
+                echo "以此类推";
+            }
+            else if ($vo["timetype"] == 70){
+                echo "神笔马良";
+            }
+            else if ($vo["timetype"] == 71){
+                echo "冒险岛";
+            }
+            else if ($vo["timetype"] == 72){
+                echo "射箭";
+            }
+            else if ($vo["timetype"] == 20){
+                echo "情境仿真";
+            }
+            else{
+                echo "放松训练";
+            }?></td>
+			<td>{$vo.s_time}</td>
+            <td>{$vo.time_length}</td>
+            <td>{$vo.synthesisscore}</td>
+            <td>{$vo.stabilityindex}</td>
+            <td>{$vo.deflatingindex}</td>
+            <td>{$vo.pressureindex}</td>
+			<td>{$vo.hrvscore}</td>
+                        <td style = "width:500px;">
+            <form method="post" action="__CONTROLLER__/deletesrecord">  
+                            <a href="http://123.206.62.179/heartwaves/index.php?m=Admin&c=Recordmanager&a=recorddetail&id={$vo.id}"><button type="button" class="btn btn-w-m btn-danger">查看</button></a>
+                            <a href="__CONTROLLER__/recordDelet/id/{$vo.id}" onclick = "return shifou();"><button type="button" class="btn btn-w-m btn-danger">删除</button></a>
+                <input type="checkbox" name="test[]" value="{$vo.id}" > 
+
+			</td>
+                    </tr>
+                    </foreach>
+			{$page}
+                    </tbody>
+		
+                    </table>
+                    
+                    </div>
+                </div>
+            </div>
+            </div>         
+                <button onclick="deletes()" style="position: absolute;bottom: 40px;left:150px;">批量删除</button>
+            </form>
+                    <button onclick="doCheck(1)"  style="position: absolute;bottom: 40px;left:35px;">全选</button>
+                    <button onclick="doCheck(2)"  style="position: absolute;bottom: 40px;left:85px;">全不选</button>
+ <div style="position: absolute;bottom: 40px;right:160px;font-size:14px;">总共&nbsp;{$count}&nbsp;条记录</div>
+
+
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+    <!-- Data Tables -->
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+ <script type="text/javascript">
+        function doCheck(b){
+            //获取所有的input选择框
+            var uid = document.getElementById("uid");
+            var list = uid.getElementsByTagName("input");
+            //遍历
+            for(var i=0;i<list.length;i++){
+                switch(b){
+                    case 1: list[i].checked = true; break; 
+                    case 2: list[i].checked = false; break; 
+                    case 3: list[i].checked = !list[i].checked; break; 
+                }
+            }
+        }
+
+       /* function deletes(){
+            obj = document.getElementsByName("test");
+            check_val = [];
+            for(k in obj){
+                if(obj[k].checked)
+                    check_val.push(obj[k].value);
+            }
+            alert(check_val);
+
+        }*/
+    </script>

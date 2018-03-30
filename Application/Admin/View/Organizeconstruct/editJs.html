@@ -1,0 +1,218 @@
+<include file="Public/top" title = "修改角色" />
+<style type="text/css">
+    .viewall{float: right;right: 5%;}
+</style>
+        <!-- start left -->
+<include file="Public/left"/>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!-- start top -->
+        <include file="Public/top"/>
+        <!-- end top -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>修改角色</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>欢迎使用HRV调节训练系统管理平台!</h5>
+                        <a href = "__CONTROLLER__/jsmanager"><div class="viewall">返回上一级</div></a>
+
+                    </div>
+                    <div class="ibox-content">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example" >
+                    <thead>
+                    <tr>
+            <!-- <th>序号</th> -->
+                        <th>角色名</th>
+                        <th>权限名称</th>
+                        <!-- <th>创建时间</th> -->
+             <th>描述</th>
+             <th>选择权限</th>
+            <th>操作</th>         
+                    </tr>
+                    </thead>
+                    <tbody>
+            <form name = "form1" action = "__CONTROLLER__/editJsOk/uid/{$data[0].id}" method = "post">
+                            <tr class="gradeU">
+           <!--  <td><input type = "text" name = "id" value = "{$data[0].id}" readonly></td> -->
+                            <td><input type = "text" name = "name" value = "{$data[0].name}" readonly></td>
+                            <!-- <td><input type = "text" name = "acode" value = "{$data[0].fid}"></td> -->
+                            <td>
+                                      <!-- <input type = "text" name = "fids" value = "{$data[0].fid}" readonly>  -->
+                                      <textarea name="fids" readonly rows="10">{$data[0].fid}</textarea>
+                            
+                            </td>
+            <!-- <td><input type = "date" name = "ctime" value = "{$data[0].ctime|date='Y-m-d',###}"></td> -->
+            <!-- <td><input type = "text" name = "ctime" value = "{$data[0].ctime}"></td> -->
+                <td><input type = "text" name = "description" value = "{$data[0].description}"></td>
+
+                <td>
+                 <?php foreach ($fenlei as $k => $v): ?>
+                                <ul>
+                                    <li>
+
+                                        <input  type = "checkbox" name = "fid[]" value="{$v['id']}" class="{$v['fid']}" onchange="check(this)"  >:{$value['name']}&nbsp;{$v['name']}
+
+                                    </li>
+
+                                    <?php if(isset($v['zi'])): ?><ul>
+                                        <?php foreach($v['zi'] as $k1=>$v1): ?>
+                                            <li>
+                                                <input  type = "checkbox" name = "fid[]" value="{$v1['id']}" class="zi{$v1['fid']}" onchange="check(this)" disabled="true">:{$value['name']}&nbsp;{$v1['name']}
+                                            </li>
+
+
+                                            <?php if(isset($v1['zi'])): ?><ul>
+                                                <?php foreach($v1['zi'] as $k2=>$v2): ?>
+                                                    <li>
+                                                        <input  type = "checkbox" name = "fid[]" value="{$v2['id']}" class="zi{$v2['fid']}" onchange="check(this)" disabled="true">:{$value['name']}&nbsp;{$v2['name']}
+                                                    </li>
+
+
+                                                    <?php if(isset($v2['zi'])): ?><ul>
+                                                        <?php foreach($v2['zi'] as $k3=>$v3): ?>
+                                                            <li>
+                                                                <input  type = "checkbox" name = "fid[]" value="{$v3['id']}" class="zi{$v3['fid']}" onchange="check(this)" disabled="true">:{$value['name']}&nbsp;{$v3['name']}
+                                                            </li>
+                                                        <?php endforeach ?>
+                                                    </ul><?php endif ?>
+
+
+                                                <?php endforeach ?>
+                                           </ul> <?php endif ?>
+
+
+                                        <?php endforeach ?>
+                                   </ul> <?php endif ?>
+                                </ul>
+                            <?php endforeach ?>
+                   <!--  <div id="uid">
+                       <?php foreach ($code as $key => $value): ?>
+                                   <input  type = "checkbox" name = "fid[]" value="{$value['id']}">:{$value['name']}&nbsp;&nbsp;&nbsp;&nbsp;
+                               <?php endforeach ?>
+                   </div>
+                    <div style = "margin:auto 130px;margin-top:30px;">
+                               <input type="button" onclick="doCheck(1)" value="全选">&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="button" onclick="doCheck(2)" value="全不选">&nbsp;&nbsp;&nbsp;&nbsp;
+                               <input type="button" onclick="doCheck(3)" value="反选">
+                           </div>
+                       </div> -->
+                </td>
+
+                <td>
+                             <input type="submit" name = "submit" value = "保存" class="btn btn-w-m btn-info" ></a>
+                            <!--<a href="http://119.29.14.66/logisticsht/index.php?m=Admin&c=Order&a=transferOrderOk&id={$v.id}"><button type="button" class="btn btn-w-m btn-info">转单</button></a>-->
+            <!--<a href="http://119.29.14.66/logisticsht/index.php?m=Admin&c=Order&a=transferOrderfailed&id={$v.id}"><button type="button" class="btn btn-w-m btn-danger">不通过</button></a>-->
+                        </td>
+                    </tr>
+            </form>
+                    <foreach name="arr2" item="vs" key="k">
+                    <if condition = "$vo.id eq $vs['fid']">
+                    <tr class="gradeU">
+                        <td>{$vs.id}</td>
+                        <td>——{$vs.name}</td>
+                        <td>
+                           <a href="{:U('Fenlei/edit',array('id'=>$vs['id']))}"><button type="button" class="btn btn-w-m btn-info">修改</button></a>
+                            <a href="{:U('Fenlei/delete',array('id'=>$vs['id']))}" onclick = "return shifou();"><button type="button" class="btn btn-w-m btn-danger">删除</button></a>
+                        </td>
+                    </tr>
+                    </if>
+                    </foreach>
+                    </tbody>
+                    </table>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+
+ <!--            <?php foreach ($xuanzhong as $xuan):?>
+            <?php var_dump($xuanzhong);?>
+            <?php endforeach?> -->
+
+
+            <!-- <div id="uid">
+                <?php foreach ($code as $key => $value): ?>
+                            <input  type = "checkbox" name = "fid[]" value="{$value['id']}">:{$value['name']}&nbsp;&nbsp;&nbsp;&nbsp;
+                        <?php endforeach ?>
+            </div>
+
+                         <div style = "margin:auto 130px;margin-top:100px;">
+                                            <button onclick="doCheck(1)">全选</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button onclick="doCheck(2)">全不选</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button onclick="doCheck(3)">反选</button>
+                                        </div>
+                                    </div>  -->
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+    <!-- Data Tables -->
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+    <script type="text/javascript">
+            function doCheck(b){
+                //获取所有的input选择框
+                var uid = document.getElementById("uid");
+                var list = uid.getElementsByTagName("input");
+                //遍历
+                for(var i=0;i<list.length;i++){
+                    switch(b){
+                        case 1: list[i].checked = true; break; 
+                        case 2: list[i].checked = false; break; 
+                        case 3: list[i].checked = !list[i].checked; break; 
+                    }
+                }
+            }
+        </script>
+
+<script language=javascript> 
+function check(t){ 
+    if(t.checked == false)
+    {
+        var par = t.parentNode;
+        var ne = par.nextElementSibling;
+        var nes = ne.getElementsByTagName('input');
+        for(var i=0;i<nes.length;i++){
+        console.log(nes[i]);
+            nes[i].checked = false;
+            nes[i].disabled = true;
+        }
+
+    }
+    else
+    {
+        var id = t.value;
+
+        var zibox = document.getElementsByClassName('zi'+id);
+//        alert(zibox);
+        console.log(zibox);
+        for(var i=0;i<zibox.length;i++)
+            zibox[i].removeAttribute('disabled');
+    }
+} 
+    /*var xz = document.getElementById(id);
+    var ids = xz.value;
+    alert(ids); 
+    alert(xz.checked);*/ 
+/*$("#xz").blur(function(){
+    var xz=document.getElementById("xz"); 
+    alert(xz.checked);
+})*/
+    /* $(".xz").blur(function(){
+
+         var id=$(".xz").val();
+         alert(id); 
+         alert($(".xz").is(':checked'));
+
+    })*/
+</script> 

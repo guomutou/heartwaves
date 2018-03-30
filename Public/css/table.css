@@ -1,0 +1,16 @@
+.table1 tr  td{ border:1px solid firebrick}
+.table1{
+    margin:50px auto;
+    align:center;
+    width:500px;
+    height:500px;
+}
+table>tr>td{
+    width:350px;
+}
+table{
+    border:0px; cellpadding:0px;cellspacing:0px;border-top:1px solid firebrick;border-bottom:1px solid firebrick;border-left:1px solid firebrick;border-right:1px solid firebrick;width:500px; height:300px ;
+}
+.table input{
+    border:none;
+}

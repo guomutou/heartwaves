@@ -1,0 +1,242 @@
+<include file="Public/top" title = "普通管理员列表" />
+        <!-- start left -->
+<include file="Public/left"/>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!-- start top -->
+        <include file="Public/top"/>
+        <!-- end top -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>普通管理员管理</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>欢迎使用HRV调节训练系统管理平台!</h5>
+                    </div>
+
+                    <div class="ibox-content">
+                    <table class="table table-striped table-bordered table-hover dataTables-example" >
+                    <thead>
+                    <form action="__CONTROLLER__/searchjingli" method="post" >
+            <a href = "__CONTROLLER__/addjingli"><button type = "button"> 新增普通管理员</button></a>&nbsp;&nbsp;
+
+             <input  id="sear" type = "text" name = "search" placeholder = "普通管理员搜索" onchange = "search()" >    <input type="submit"  value="搜索"><br><br>
+
+            </form>
+            <form action="__CONTROLLER__/editjingli" method="post" >
+
+                    <tr>
+                       <!--  <th>序号</th> -->
+                        <!-- <th>序号</th> -->
+                        <th>账户名称</th>
+                        <th>创建时间</th>
+                        <th>用户编码</th>
+                        <th>用户数量</th>
+                        <th>用户上限</th>
+                        <th>运行状态</th>
+                        <th>到期时间</th>
+                        <th>操作</th>
+                    </tr>
+                       
+                    
+                    </thead>
+                    <tbody>
+                    <?php foreach($data as $k=>$v):?>
+
+                    <tr class="gradeU">
+                       <!--&lt;!&ndash;  <td>{$vo.id}</td> &ndash;&gt;-->
+                        <input type="hidden" name="id" value="<?php echo  $v[id]?>"></td>
+                        <input type="hidden" name="id" value="<?=$v[id]?>" >
+                       <td class="catt"><input type="text" name="username" value="<?=$v['username']?>" attid="<?=$v['id']?>"></td>
+
+                        <td><?php echo  date('Y-m-d',$v[create_time])?></td>
+                        <td><?php echo $v[kouling]?></td>
+                        <td><?=$v['yonghu']?></td>
+                        <td class="user_num"><input name="user_num" type="text" value="<?php echo $v['user_num']?>" attid="<?=$v['id']?>"></td>
+                        <td  class="statuss" >
+
+                            <select name = "status"  attid="<?=$v['id']?>" >
+                            <?php if ($v['status']==0): ?>
+                            <option selected  value="0">正常</option>
+
+                            <option value="1">已经锁定</option>
+                            <?php endif?>
+                            <?php  if ($v['status']==1):?>
+                            <option   value="0">正常</option>
+
+                            <option selected  value="1 ">已经锁定</option>
+                            <?php endif?>
+                            </select>
+                        </td>
+                        <td class="endtime" >
+                        <!-- class="form-control" -->
+                        <div class="input-group input-append date form_date">
+                            <input type="text" class="" readonly id="end_time" name="endtime" value="{:date('Y-m-d H:i:s',$v[end_time])}"  placeholder="" attid="<?=$v['id']?>">
+                            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-time" aria-hidden="true"></span></span>
+                        </div>
+                        <!-- <input  name="endtime" class="sang_Calender" type="text" value="<?=date('Y-m-d',$v['end_time'])?>" attid="<?=$v['id']?>"> -->
+
+                        </td>
+
+                        <td style = "width:500px;">
+                        <!-- <button type="submit" class="btn btn-w-m btn-info">修改</button></a> -->
+                            <a href="<?=U('Organizeconstruct/getuser?id='.$v['id'])?>" target="_blank"><button type="button" class="btn btn-w-m btn-danger">查看用户</button></a>
+                            <a href="__CONTROLLER__/deleteorg/id/<?php echo $v[id]?>"  onclick= "if(confirm( '如果删除该组，组内的成员将一起被删除 ')==false)return   false; " target="_blank"><button type="button" class="btn btn-w-m btn-danger">删除</button></a>
+
+                          </td>
+                    </tr>
+
+    <?php endforeach?>
+                    </form>
+            {$page}
+                    </tbody>
+        
+                    </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+                    <div style="position: absolute;bottom: 60px;right:160px;font-size:14px;">总共&nbsp;{$count}&nbsp;条记录</div>
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+    <!-- Data Tables -->
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/datetime.js"></script>
+    <!-- 时间插件 -->
+<script type="text/javascript" src="__PUBLIC__/js/plugins/datepicker/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__PUBLIC__/js/plugins/datepicker/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript" src="__PUBLIC__/js/plugins/datepicker/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+    // $('.form_datetime').datetimepicker({
+    //     //language:  'fr',
+    //     language:  'zh-CN',
+    //     weekStart: 1,
+    //     todayBtn:  1,
+    //     autoclose: 1,
+    //     todayHighlight: 1,
+    //     startView: 2,
+    //     forceParse: 0,
+    //     showMeridian: 1
+    // });
+    $('.form_date').datetimepicker({
+        // language:  'cn',
+        // language: 'zh',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        language: 'zh-CN',
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0,
+        startDate:new Date(),
+    });
+    $('.form_time').datetimepicker({
+        language:  'zh-CN',
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 1,
+        minView: 0,
+        maxView: 1,
+        forceParse: 0
+    });
+</script>
+
+
+
+<script type = "text/javascript">
+    function search(){
+        // alert(1);
+        // alert(1);
+//            var x = document.getElementById("sear");
+//            window.location = "http://localhost/heartwaves/index.php?m=Admin&c=Jingli&a=searchjingli&str="+x.value;
+//                console.log(x);
+    }
+</script>
+	<script type="text/javascript">
+    // 修改普通管理员姓名  
+          $('.catt input').blur(function(){
+            //获取值
+                var id= $(this).attr("attid");
+                var va= $(this).val();
+                var PostData= {
+                    'id':id,
+                    'name':va
+                                } ;
+           //发送post请求
+            $.post("{:U('Jingli/editjingliname')}",PostData,
+                function(data){
+                });
+
+        })
+    // 修改普通管理员到期时间  
+        $(".endtime input").change(function(){
+            var id= $(this).attr("attid");
+                var va= $(this).val();
+                var PostData= {
+                    'id':id,
+                    'endtime':va
+                                } ;
+           //发送post请求
+            $.post("{:U('Jingli/endtime')}",PostData,
+                function(data){
+                });
+        });
+    // 修改普通管理员状态  
+        $('.statuss select').blur(function(){
+            //获取值
+                var id= $(this).attr("attid");
+                var va= $(this).val();
+                var PostData= {
+                    'id':id,
+                    'status':va
+                                } ;
+           //发送post请求
+            $.post("{:U('Jingli/statuss')}",PostData,
+                function(data){
+                });
+            // console.log(PostData);
+
+        })
+  // 修改普通管理员上限人数
+        $('.user_num input').blur(function(){
+            //获取值
+                var id= $(this).attr("attid");
+                var va= $(this).val();
+                var PostData= {
+                    'id':id,
+                    'pass':va
+                                } ;
+           //发送post请求
+            $.post("{:U('Jingli/numberofpeople')}",PostData,
+                function(data){
+                });
+            // console.log(PostData);
+
+        })
+		// function putfile(){
+		// 	var str = document.getElementById("file").value;
+	 //   		var suffix = str.substr(str.length-4);
+	 //   		if (suffix == 'xlsx') {
+	 //   			var submit = document.getElementById("submit");
+	 //   			submit.disabled = false;
+	 //   		}else{
+	 //   			alert("请上传xlsx类型的文件");
+	 //   		};
+		// }
+	</script>

@@ -1,0 +1,45 @@
+[ 2018-03-26T17:06:23+08:00 ] 121.69.57.154 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001331s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001372s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-26T17:06:37+08:00 ] 121.69.57.154 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000273s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000273s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000311s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-26T17:06:48+08:00 ] 121.69.57.154 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000297s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-26T17:06:54+08:00 ] 121.69.57.154 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-26T17:07:00+08:00 ] 121.69.57.154 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000258s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000381s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+

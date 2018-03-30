@@ -1,0 +1,180 @@
+<include file="Public/top" title = "用户管理" />
+<style type="text/css">
+    .report{background-color: rgb(97,193,161);width: 100px;height: 40px;line-height: 40px;color: #fff;position: fixed;bottom: 60px;right: 3%;text-align: center;}
+    .viewall{float: right;right: 5%;}
+</style>
+        <!-- start left -->
+<include file="Public/left"/>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!-- start top -->
+        <include file="Public/top"/>
+        <!-- end top -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>用户管理</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>欢迎使用HRV调节训练系统管理平台!</h5>
+                        <a href = "__CONTROLLER__/orgmanager"><div class="viewall">返回上一级</div></a>
+                    </div>
+       <!--  <script type = "text/javascript">
+           function search(){
+           var x = document.getElementById("sear");            
+           window.location = "http://120.27.98.52/heartwaves/index.php?m=Admin&c=Organizeconstruct&a=usersearch&str="+x.value;
+       }
+       </script> -->
+                    <div class="ibox-content">
+                    <table class="table table-striped table-bordered table-hover dataTables-example"   id="uid">
+                    <thead>
+        
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;<input  id="sear" type = "text" name = "search" placeholder = "用户名搜索" onchange = "search()" > -->
+
+
+
+            <form name = "form1" action = "__CONTROLLER__/usersearch" method = "post">
+            <!--<a href = "#"><button type = "button"> 新增用户</button></a>-->&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;<span style = "font-size:15px;font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "uname" placeholder = "学号">&nbsp;&nbsp;&nbsp;&nbsp;
+        <!--    <span style = "font-size:15px;font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "time" placeholder = "工作单位">&nbsp;&nbsp;&nbsp;&nbsp;
+           <span style = "font-size:15px;font-weight:bold;"></span>&nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "position" placeholder = "职位">&nbsp;&nbsp;&nbsp;&nbsp; -->
+            <!-- <span style = "font-size:15px;font-weight:bold;">单位性质:</span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <select name = "companytype" >
+                <option>企业</option>
+                <option>政府</option>
+                <option>事业单位</option>
+            </select> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type = "submit" name = "submit" value = "查询">
+            </form>
+
+
+            <br><br>
+                    <tr>
+                        <!-- <th>序号</th> -->
+                        <th>学号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>年龄</th>
+                        <th>职位</th>
+                        <th>工作单位</th>
+                        <!--<th>既往病史</th>
+                        <th>observe</th>
+                        <th>rember</th>
+                        <th>emotion</th>
+                        <th>willpower</th>
+                        <th>thinking</th>
+                        <th>角色</th> -->
+                       <!--  <th>状态</th> -->
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="list" item="vo" key="k">
+                    <tr class="gradeU">
+                        <!-- <td>{$vo.id}</td> -->
+                        <td>{$vo.student_number}</td>
+                        <td>{$vo.nickname}</td>
+                        <td>
+                            <?php 
+                                if($vo["sex"] == 1){
+                                    echo "男";
+                                }else{
+                                    echo "女";
+                                }
+                            ?>
+                        </td>
+                        <td>{$vo.birthday}</td>
+                        <td>{$vo.position}</td>
+                        <td>{$vo.workingplace}</td>
+                       <!--  <td>{$vo.medicalhistory}</td>
+                        <td>{$vo.observe}</td>
+                        <td>{$vo.rember}</td>
+                        <td>{$vo.emotion}</td>
+                        <td>{$vo.willpower}</td>
+                        <td>{$vo.thinking}</td>
+                        <td><span style = "color:red;">{$vo.identity}</span></if></td> -->
+                        <!-- <td><if condition = "$vo.locked eq 2"><span style = "color:red;">正常</span><else /><span style = "color:red;">锁定</span></if></td> -->
+                       <!--<td><if condition = "$vo.status eq 2"><span style = "color:red;">回收</span><else /><span class="label label-info">正常</span></if></td>
+                        <td><if condition = "$vo.status eq 2"><span style = "color:red;">回收</span><else /><span class="label label-info">正常</span></if></td>-->
+<form method="post" action="__CONTROLLER__/deletesUser"> 
+                       <td style = "width:500px;">
+                           <a href="__CONTROLLER__/editUser/uid/{$vo.id}" target="_blank"><button type="button" class="btn btn-w-m btn-info">编辑</button></a>
+                        <!--    <a href="__CONTROLLER__/record/id/{$vo.id}" target="_blank"><button type="button" class="btn btn-w-m btn-info">查看记录</button></a> -->
+                            <!-- <a href="__CONTROLLER__/stopUser/uid/{$vo.id}" target="_blank"><button type="button" class="btn btn-w-m btn-danger"><if condition = "$vo.locked eq 2">锁定<else />启用</if></button></a> -->
+                            <a href="__CONTROLLER__/deleteUser/uid/{$vo.id}" target="_blank"   onclick= "if(confirm( '删除用户信息，HRV记录也会被删除。 ')==false)return   false; " ><button type="button" class="btn btn-w-m btn-danger">删除</button></a>
+
+     <input type="checkbox" name="test[]" value="{$vo.id}" >
+
+                   
+       <!--  <a href="{:U('Organizeconstruct/aaa')}&id={$vo['id']}"><div class="report">导出记录</div></a> -->
+
+            </td>
+                    </tr>
+                    </foreach>
+            {$page}
+                    </tbody>
+        
+                    </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+                   <a  onclick= "if(confirm( '删除用户信息，HRV记录也会被删除。 ')==false)return   false; "><button style="position: absolute;bottom: 50px;left:150px;">批量删除</button></a>
+</form>
+                    <button onclick="doCheck(1)"  style="position: absolute;bottom: 50px;left:35px;">全选</button>
+                    <button onclick="doCheck(2)"  style="position: absolute;bottom: 50px;left:85px;">全不选</button><!-- 
+                    <button onclick="doCheck(3)">反选</button> -->
+                   <div style="position: absolute;bottom: 60px;right:160px;font-size:14px;">总共&nbsp;{$count}&nbsp;条记录</div>
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+    <!-- Data Tables -->
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.tableTools.min.js"></script>
+    <script type="text/javascript">
+        function putfile(){
+            var str = document.getElementById("file").value;
+            var suffix = str.substr(str.length-4);
+            if (suffix == 'xlsx') {
+                var submit = document.getElementById("submit");
+                submit.disabled = false;
+            }else{
+                alert("请上传xlsx类型的文件");
+            };
+        }
+    </script>
+
+    <script type="text/javascript">
+        function doCheck(b){
+            //获取所有的input选择框
+            var uid = document.getElementById("uid");
+            var list = uid.getElementsByTagName("input");
+            //遍历
+            for(var i=0;i<list.length;i++){
+                switch(b){
+                    case 1: list[i].checked = true; break; 
+                    case 2: list[i].checked = false; break; 
+                    case 3: list[i].checked = !list[i].checked; break; 
+                }
+            }
+        }
+
+       /* function deletes(){
+            obj = document.getElementsByName("test");
+            check_val = [];
+            for(k in obj){
+                if(obj[k].checked)
+                    check_val.push(obj[k].value);
+            }
+            alert(check_val);
+
+        }*/
+    </script>

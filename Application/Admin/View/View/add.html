@@ -1,0 +1,121 @@
+<include file="Public/top" title = "心脑电波-添加信息" />
+        <!-- start left -->
+<include file="Public/left"/>
+         <!-- end left -->
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>添加信息</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-lg-12">
+                   <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <!-- <h5>All form elements <small>With custom checbox and radion elements.</small></h5> -->
+                            <div class="ibox-tools">
+                                <a class="collapse-link">
+                                    <i class="fa fa-chevron-up"></i>
+                                </a>
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    <i class="fa fa-wrench"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#">Config option 1</a>
+                                    </li>
+                                    <li><a href="#">Config option 2</a>
+                                    </li>
+                                </ul>
+                                <a class="close-link">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="ibox-content">
+                        <div class="hr-line-dashed"></div>
+                            <form method="post" class="form-horizontal" action="{:U('View/doadd')}" enctype="multipart/form-data">
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">请选择活动模板</label>
+                                    <select name="mb_id" style="margin-left:1%;">
+                                        <option>请选择模板</option>
+                                        <?php foreach ($fl as $key => $value): ?>
+                                            <option value="{$value.id}">{$value.name}</option>
+                                        <?php endforeach ?>
+                                    </select><div class="hr-line-dashed">                                   
+                                </div>
+
+								<div class="form-group has-success"><label class="col-sm-4 control-label">活动内容1</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="text1" ></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动图片1</label>
+                                    <div class="col-sm-3"><input type="file" name="pic1" ></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动内容2</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="text2" ></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动图片2</label>
+
+                                    <div class="col-sm-3"><input type="file" name="pic2" ></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                
+
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动内容3</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="text3" ></div>
+                                </div>
+                                 <div class="form-group has-success"><label class="col-sm-4 control-label">活动图片3</label>
+
+                                    <div class="col-sm-3"><input type="file" name="pic3" ></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动内容4</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="text4" ></div>
+                                </div>
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动图片4</label>
+
+                                    <div class="col-sm-3"><input type="file" name="pic4" ></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动内容5</label>
+
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="text5" ></div>
+                                </div>                                
+                                
+                                <div class="form-group has-success"><label class="col-sm-4 control-label">活动图片5</label>
+
+                                    <div class="col-sm-3"><input type="file" name="pic5" ></div>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <!-- <div class="hr-line-dashed"></div>
+                                <div class="form-group"><label class="col-sm-4 control-label">幻灯片地址（前面请加上http://）</label>
+                                    <div class="col-sm-3"><input type="text" class="form-control" name="listpic" ></div>
+                                </div> -->
+                               <div class="ibox-content">
+                            <div class="text-center">
+                            <input type="submit" value="添加" class="btn btn-primary" data-toggle="modal">
+                            </div>
+
+                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+

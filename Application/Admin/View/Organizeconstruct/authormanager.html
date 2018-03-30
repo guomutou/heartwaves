@@ -1,0 +1,79 @@
+<include file="Public/top" title = "权限管理" />
+        <!-- start left -->
+<include file="Public/left"/>
+        <div id="page-wrapper" class="gray-bg dashbard-1">
+        <!-- start top -->
+        <include file="Public/top"/>
+        <!-- end top -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>权限管理</h2>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>欢迎使用HRV调节训练系统管理平台！</h5>
+                    </div>
+					
+					<script type = "text/javascript">
+			function search(){
+			var x = document.getElementById("sear");			
+			window.location = "http://120.27.98.52/heartwaves/index.php?m=Admin&c=Organizeconstruct&a=authSearch&str="+x.value;
+		}
+		</script>
+					
+                    <div class="ibox-content">
+
+                    <table class="table table-striped table-bordered table-hover dataTables-example" >
+                    <thead>
+			<!-- <a href = "__CONTROLLER__/addAuth"><button type = "button">增加权限</button></a>&nbsp;&nbsp;
+                                    &nbsp;&nbsp;&nbsp;&nbsp;<input type = "text" name = "search" placeholder = "搜索" onchange = "search()" id = "sear"> -->
+                    <tr>
+                        <th>权限名</th>
+		      <!-- <th>权限代码</th> -->
+                        <th>权限描述</th>
+                        <!-- <th>操作</th> -->
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <foreach name="list" item="vo" key="k">
+                    <tr class="gradeU">
+                        <td>{$vo.name}</td>
+                       <!--  <td>{$vo.acode}</td> -->
+                        <td>{$vo.description}</td>
+                       <!--<td><if condition = "$vo.state eq 1"><span style = "color:red;">正常</span><else /><span style = "color:red;">冻结</span></if></td>
+                       <td><if condition = "$vo.status eq 2"><span style = "color:red;">回收</span><else /><span class="label label-info">正常</span></if></td>
+                        <td><if condition = "$vo.status eq 2"><span style = "color:red;">回收</span><else /><span class="label label-info">正常</span></if></td>-->
+
+                       <!--  <td style = "width:500px;">
+                          <a href="__CONTROLLER__/editAuth/aid/{$vo.id}" target="_blank"><button type="button" class="btn btn-w-m btn-info">修改</button></a>
+                          <a href="__URL__/delete/id/{$vo.id}" onclick = "return shifou();"><button type="button" class="btn btn-w-m btn-danger">查看</button></a>
+                           <a href="__URL__/deleteAuth/aid/{$vo.id}" onclick = "return shifou();"><button type="button" class="btn btn-w-m btn-danger">删除</button></a>
+                       
+                                   </td> -->
+                    </tr>
+                    </foreach>
+			{$page}
+                    </tbody>
+		
+                    </table>
+                    
+                    </div>
+                </div>
+            </div>
+            </div>
+
+    <!-- start footer -->
+                    <include file="Public/footer" />
+            <!-- end footer -->
+        </div>
+    <!-- Data Tables -->
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="__PUBLIC__/Admin/js/plugins/dataTables/dataTables.tableTools.min.js"></script>

@@ -1,0 +1,18 @@
+[ 2018-03-27T12:59:22+08:00 ] 202.120.197.36 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000300s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000336s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
+[ 2018-03-27T13:25:01+08:00 ] 202.120.197.36 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000277s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000275s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000310s ]
+ERR: SQLSTATE[HY000] [2003] Can't connect to MySQL server on '127.0.0.1' (111)
+
