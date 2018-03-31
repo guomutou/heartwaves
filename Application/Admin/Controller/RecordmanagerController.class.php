@@ -14,7 +14,14 @@ class RecordmanagerController extends Controller{
                     ->where("a.jl_id='$_SESSION[id]'")
                     ->order('b.id desc')
                     ->select();
-                    $count  = count($coun);
+                foreach ($coun as $k=>$v){
+                        $listtemp[]=array_filter($v);
+                                $lists=array_filter($listtemp);
+                }
+
+        $coun=count( $lists);		
+	
+                    $ceunt  = count($coun);
                     $Page = new \Think\Page($count,10);
                     $show = $Page->show();// 分页显示输出
          $list=$UserModel->alias('a')
@@ -82,10 +89,16 @@ class RecordmanagerController extends Controller{
            	}
 
       		$this->assign("group",$group);
-           // /print_r($list);exit("ccc");
-			$this->assign("count",$count);
+
+		foreach ($list as $k=>$v){
+			$listtemp[]=array_filter($v);
+				$lists=array_filter($listtemp);		
+		}     
+		
+	$counts=count( $lists); 	
+			$this->assign("count",$counts);
 			$this->assign("sel",$sel);
-			$this->assign("list",$list);
+			$this->assign("list",$lists);
 			$this->assign('page',$show);// 赋值分页输出
 			$this->display();
 	}

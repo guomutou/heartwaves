@@ -560,7 +560,8 @@ class OrganizeconstructController extends Controller{
                 ->select();
 
         }else{
-            $count      = $m->count();
+            $count      = count($m->where("jl_id='$_SESSION[id]'")
+                ->select());
             $Page       = new \Think\Page($count,10);
             $show       = $Page->show();// 分页显示输出
             $list = $m->order('id desc')->limit($Page->firstRow.','.$Page->listRows)
@@ -570,7 +571,7 @@ class OrganizeconstructController extends Controller{
 
 		$this->assign("count",$count);
 		$this->assign("list",$list);
-        $this->assign('page',$show);// 赋值分页输出
+      	        $this->assign('page',$show);// 赋值分页输出
 		$this->display();
 	}
 
@@ -600,12 +601,12 @@ class OrganizeconstructController extends Controller{
 	public function deleteorg(){
 		$id = I('get.id','','trim');
 		$name = M("organization")->where("id = '$id'")->getfield("name");
-		$ids = M("user")->field("id")->where("groups = '$name'")->select();
+		$ids = M("user")->field("id")->where("groups = '$name' and  jl_id='$_SESSION[id]'")->select();
 		foreach ($ids as $key => $value) {
 			$user_id = $value['id'];
 			M('user')->where("id  ='$user_id'")->delete();
 		}
-		$bool = M('organization')->where("id = $id")->delete();
+		$bool = M('organization')->where("id = '$id'  and  jl_id='$_SESSION[id]'" )->delete();
 		if($bool){
 			$this->success("删除成功!",U("Organizeconstruct/orgmanager"),3);
 		}else{

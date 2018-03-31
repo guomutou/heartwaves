@@ -13,6 +13,7 @@ class TccController extends Controller{
                 'subName' => array('date','Ymd'),
            );
            $upload = new \Think\Upload($config);
+	 $prx = M("jingli")->where("id = '$_SESSION[id]'")->find();
            if (!$info = $upload->upload()) {
            		$this->error($upload->getError());
            	}
@@ -32,10 +33,8 @@ class TccController extends Controller{
                     $objReader = \PHPExcel_IOFactory::createReader('Excel5');
                     $objPHPExcel =$objReader->load($file_name, $encode = 'utf-8');
                	}
-			   	//var_dump($objReader);die;
                	$sheet =$objPHPExcel->getSheet(0);
                	$highestRow = $sheet->getHighestRow();//取得总行数
-               	// echo $highestRow;exit("行");
         		$highestColumn =$sheet->getHighestColumn(); //取得总列数
       			for ($i = 2; $i <= $highestRow; $i++) {
 	         		$data['nickname'] =$objPHPExcel->getActiveSheet()->getCell("A" .$i)->getValue();
@@ -65,19 +64,22 @@ class TccController extends Controller{
 						echo "<input type='hidden' value='{$name}' id='".$i."'>";
 					    echo "<script>  var name =  document.getElementById('".$i."').value; var str = name+'手机号格式不正确'; alert(str);</script>";
 					} */
-					echo $i;
+				//	echo $i;
 					$student_numbers = M("user")->where("student_number = '$student_number'")->getfield("student_number");
-					//print_r($student_numbers);exit("学号");
+			                                        if (empty($student_number) && empty($group)) {
+						continue;
+                                        }					
+//print_r($student_numbers);exit("学号");
 					if (! ($student_number && $group)) {
 						// echo $student_number .$group;
 						// echo '13';
-						 $this->error("姓名，学号，工作单位必填");die();
+						 $this->error("姓名，用户组必填");die();
 					}elseif($student_numbers){
  						$name = $data['nickname'];
 						echo "<input type='hidden' value='{$name}' id='".$i."'>";
 					    echo "<script>  var name =  document.getElementById('".$i."').value; var str = name+'学号与别人重复'; alert(str);</script>";
 					}else{
-						$data['student_number'] = $student_number;
+						$data['student_number'] =$prx['kouling']. $student_number;
 						if ($is_exit ) {
 				        	$data['groups'] = $group;
 				            $bool = M('user')->add($data);

@@ -35,7 +35,7 @@ class LoginController extends Controller {
                 $_SESSION['kouling'] = md5(md5($result['kouling']));
                  $data = $M->where("id='$result[id]'")->save([
                 'lat_time'=>$time
-                ]);      
+                ]);     
                $this->success('登陆成功',U('Admin/Index/index'),3);
         }else{
                   $data = $M->where("id='$result[id]'")->save([

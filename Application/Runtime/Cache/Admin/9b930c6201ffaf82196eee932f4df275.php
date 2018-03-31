@@ -234,7 +234,7 @@
                     <table class="table table-striped table-bordered table-hover dataTables-example" >
                     <thead>
             <a href = "/heartwaves/index.php/Admin/Organizeconstruct/addorg"><button type = "button"> 新增组织</button></a>&nbsp;&nbsp;
-            &nbsp;&nbsp;&nbsp;&nbsp;<input  id="sear" type = "text" name = "search" placeholder = "组织名搜索" onchange = "search()" ><br><br>
+            <!--&nbsp;&nbsp;&nbsp;&nbsp;<input  id="sear" type = "text" name = "search" placeholder = "组织名搜索" onchange = "search()" ><br><br>-->
                     <tr>
                        <!--  <th>序号</th> -->
                         <th>组织名</th>
