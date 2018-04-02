@@ -194,9 +194,13 @@ class ApiuserrController extends BaseController {
 		$seconddata10 = M("fenlei")->field("id,name")->where("fid = 8")->select();
 		$seconddata11 = M("fenlei")->field("id,name")->where("fid = 9")->select();
 		$seconddata12 = M("fenlei")->field("id,name")->where("fid = 12")->select();
-		$group = M("user")->where("id = '$id'")->getfield("groups");
-		$js = M("organization")->where("name = '$group'")->getfield("js_name");
-		$autho = M("js")->where("name = '$js'")->getfield("fid");
+		$group = M("user")->where("id = '$id'")->select();
+		$name=$group[0]['groups'];
+		$group=$group[0]['jl_id'];
+		$js = M("organization")->where("name = '$name' and jl_id='$group'")->select();
+		$names=$js[0]['js_name'];
+		$sjs=$js[0]['jl_id'];
+		$autho = M("js")->where("name = '$names' and jl_id='$sjs'")->getfield("fid");
 		//$autho = M("user")->join("LEFT JOIN h_js as js ON js.name = h_user.identity")->where("h_user.id = '$id'")->getfield("js.fid");
 		$fenlei = explode(",", $autho);
 		foreach ($bigdata as $key => $value) {

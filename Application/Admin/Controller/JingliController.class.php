@@ -103,8 +103,7 @@ class JingliController extends CommonController {
     //搜索普通管理员
     public  function searchjingli(){
         $m = M("jingli");
-        $str =I('post.str');
-//        var_dump($_POST);die;
+        $str =I('post.search');
         $count      = $m->count();
         $Page       = new \Think\Page($count,20);
         $show       = $Page->show();// 分页显示输出

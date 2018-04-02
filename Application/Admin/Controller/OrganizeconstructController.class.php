@@ -36,7 +36,7 @@ class OrganizeconstructController extends Controller{
 	//取出管理员下面的用户
     public function getuser(){
 	    $id=I('get.id');
-        $js = M("organization")->field("name,id")->select();
+        $js = M("organization")->field("name,id")->where("jl_id='$id'")->select();
         $m = M("user");
         $count      = $m->count();
         $Page       = new \Think\Page($count,10);
@@ -49,7 +49,6 @@ class OrganizeconstructController extends Controller{
         $this->assign('page',$show);// 赋值分页输出
         $this->assign('count',$count);
         $this->js = $js;
-      // var_dump($list);
         $this->display('usermanager');
     }
 	//新增用户
@@ -617,9 +616,7 @@ class OrganizeconstructController extends Controller{
 	public function viewuser(){
 		$id = I('get.id','','trim');
 		$organization = M("organization")->where("id = '$id'")->getField("name");
-		//echo $js;exit("hello");
-		
-		$user = M("user")->where("groups = '$organization'")->select();
+		$user = M("user")->where("groups = '$organization' and jl_id='$_SESSION[id]'")->select();
         $count      = count($user);
        	$Page       = new \Think\Page($count,10);
        	$show       = $Page->show();// 分页显示输出
