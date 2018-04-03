@@ -973,3 +973,103 @@ SQL: SELECT * FROM `h_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
 SQL: SHOW COLUMNS FROM `h_gonggao` [ RunTime:0.0005s ]
 SQL: SELECT `content` FROM `h_gonggao` ORDER BY ctime desc LIMIT 1   [ RunTime:0.0003s ]
 
+[ 2018-04-02T23:47:17+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Home&c=Apiuserr&a=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000300s ]
+SQL: SHOW COLUMNS FROM `h_fenlei` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid = 0 )  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid != 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_site` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_email_set` [ RunTime:0.0004s ]
+SQL: SELECT * FROM `h_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0005s ]
+SQL: SELECT `id` FROM `h_user` WHERE ( student_number = 'YTchen1982' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `password` FROM `h_user` WHERE ( student_number = 'YTchen1982' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`realName`,`student_number`,`weight`,`height`,`workingPlace`,`position`,`medicalHistory`,`mobile`,`birthday`,`sex`,nickname as username,`email`,`pic`,groups as organization,`companytype` FROM `h_user` WHERE ( student_number = 'YTchen1982' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id` FROM `h_user` WHERE ( student_number = 'YTchen1982' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_record` [ RunTime:0.0007s ]
+SQL: SELECT `HRVscore` FROM `h_record` WHERE ( user_id = '568' )  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: hrvscore /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 23 行.
+SQL: SHOW COLUMNS FROM `h_radardatas` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_radardatas` WHERE ( user_id = '568' )  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: observe /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 33 行.
+NOTIC: [8] Undefined variable: rember /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 34 行.
+NOTIC: [8] Undefined variable: emotion /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 35 行.
+NOTIC: [8] Undefined variable: thinking /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 36 行.
+NOTIC: [8] Undefined variable: willpower /data/www/html/heartwaves/Application/Home/Controller/ApiuserrController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `h_mood` [ RunTime:0.0005s ]
+SQL: SELECT `moodtime`,`moodmark`,`moodsocre` FROM `h_mood` WHERE ( uid = '568' ) ORDER BY moodtime LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-04-02T23:47:17+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Home&c=Apiuserr&a=indexautho
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000230s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000309s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000348s ]
+SQL: SHOW COLUMNS FROM `h_fenlei` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid = 0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid != 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_site` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_email_set` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 0 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 1 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 2 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 3 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 4 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 5 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 43 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 44 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 6 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 7 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 8 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 9 )  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`name` FROM `h_fenlei` WHERE ( fid = 12 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_user` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_user` WHERE ( id = '568' )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_organization` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_organization` WHERE ( name = '测试组' and jl_id='40' )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_js` [ RunTime:0.0005s ]
+SQL: SELECT `fid` FROM `h_js` WHERE ( name = '初级学员' and jl_id='40' ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-04-02T23:47:17+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Home&c=Apiuserr&a=noticeboard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000212s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000246s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000278s ]
+SQL: SHOW COLUMNS FROM `h_fenlei` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid = 0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid != 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_site` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_email_set` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `h_gonggao` [ RunTime:0.0004s ]
+SQL: SELECT `content` FROM `h_gonggao` ORDER BY ctime desc LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2018-04-02T23:47:27+08:00 ] 223.72.60.213 /heartwaves/index.php?m=Home&c=Apiuserr&a=noticeboard
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000366s ]
+SQL: SHOW COLUMNS FROM `h_fenlei` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid = 0 )  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `h_fenlei` WHERE ( fid != 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_site` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_site` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_email_set` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `h_email_set` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `h_gonggao` [ RunTime:0.0004s ]
+SQL: SELECT `content` FROM `h_gonggao` ORDER BY ctime desc LIMIT 1   [ RunTime:0.0003s ]
+

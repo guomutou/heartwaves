@@ -621,7 +621,7 @@ class OrganizeconstructController extends Controller{
        	$Page       = new \Think\Page($count,10);
        	$show       = $Page->show();// 分页显示输出
 
-		$user = M("user")->where("groups = '$organization'")->limit($Page->firstRow.','.$Page->listRows)->select();
+		$user = M("user")->where("groups = '$organization' and jl_id='$_SESSION[id]'")->limit($Page->firstRow.','.$Page->listRows)->select();
 		$this->assign("count",$count);
 		$this->assign("list",$user);
         $this->assign('page',$show);// 赋值分页输出
